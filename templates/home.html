@@ -14,7 +14,7 @@
         font-size:48px;
         font-weight:normal;
         text-align: center;
-        color: rgb(200,50,50);
+        color: rgb(50,50,50);
         }
       p,h3  {
         color: rgb(80,80,80)
@@ -30,26 +30,43 @@
   </head>
   
   <body>
-    
+    {% include 'nav.html'%}
+    <img class="img-fluid" id="banner" src="https://careers-website.jinithnair.repl.co/static/banner.jpg" >
     <div class="container-md"">
       <h1 class="text-center mt-2 mb-4" >Amazing Careers</h1>
-      <img class="img-fluid" id="banner" src="https://careers-website.jinithnair.repl.co/static/banner.jpg" >
+      
       <h2 class="text-center mt-2 mb-4">About us</h2>
-      <p class="text-center" class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Metus aliquam eleifend mi in nulla posuere. Enim nunc faucibus a pellentesque sit amet porttitor eget dolor. Donec ac odio tempor orci dapibus. Amet justo donec enim diam vulputate ut pharetra sit amet. Platea dictumst vestibulum rhoncus est pellentesque. Eu scelerisque felis imperdiet proin fermentum. Nunc lobortis mattis aliquam faucibus purus in. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Cras adipiscing enim eu turpis egestas pretium aenean pharetra magna. Eget nulla facilisi etiam dignissim diam quis. Enim ut tellus elementum sagittis vitae et leo duis ut. Orci eu lobortis elementum nibh tellus. </p>
+
+      <div class="row">
+        <div class="col-md-6">
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Metus aliquam eleifend mi in nulla posuere. Enim nunc faucibus a pellentesque sit amet porttitor eget dolor. Donec ac odio tempor orci dapibus. Amet justo donec enim diam vulputate ut pharetra sit amet. Platea dictumst vestibulum rhoncus est pellentesque. Eu scelerisque felis imperdiet proin fermentum. Nunc lobortis mattis aliquam faucibus purus in. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Cras adipiscing enim eu turpis egestas pretium aenean pharetra magna. Eget nulla facilisi etiam dignissim diam quis. Enim ut tellus elementum sagittis vitae et leo duis ut. Orci eu lobortis elementum nibh tellus. </p>
+        </div>
+         <div class="d-none d-md-block col-md-6">
+           <img src="https://careers-website.jinithnair.repl.co/static/people.jpg" style="height:340px;border-radius:4px">
+         </div>
+      </div>
+
+
+      
+      
 <h2 class="text-center mt-2 mb-4">Open positions</h2>
 <div>
   
          {% for job in jobs %}
-           {% include 'jobitem.html' %}
+          {% include 'jobitem.html' %}
           {% endfor %}
           
 </div>
       
+
+
+    
         
-      
       <div style="text-align: center">
-          <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p class="mt-4">Copyright 2023, Jovian</p>
+          <a href="mailto:info@allostasis.com.au?subject=Question%20&body=Hello%2C%0D%0A%0D%0AG'day.%0D%0A%0D%0A%3CYour%20question%20here%3E%0D%0A%0D%0ARegards."  class="btn btn-primary btn-lg">Contact Us</a>
+
+        {%include 'footer.html'%}
+       
       </div>
       
     </div>
